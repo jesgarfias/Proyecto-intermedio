@@ -1,0 +1,251 @@
+@mixin smartphones{
+  @media screen and (max-width:26.94rem) {@content}
+};
+@mixin large-smartphones{
+  @media screen and (max-width:36rem) {@content};
+}
+@mixin tablets{
+  @media screen and (max-width:48rem) {@content};
+}
+@mixin large-tablets{
+  @media screen and (max-width:64rem) {@content};
+}
+.sigmod_services {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin: auto;
+    gap: 3rem;
+    align-items: center;
+    width: 90%;
+    @include smartphones{
+      flex-direction: column;
+    }
+  }
+  .sigmod_services-reverse{
+    @include smartphones{
+      flex-direction: column-reverse;
+    }
+  }
+  .sigmod_title {
+    font-size: 3.5rem;
+    text-align: center;
+    @include large-tablets{
+      font-size: 1.8rem;
+    }
+    @include tablets{
+      font-size: 1.8rem;
+    }
+    @include smartphones{
+      font-size: 1.5rem;
+    }
+  }
+  
+  .sigmod_img {
+    width: 100%;
+  }
+  
+  [data-animation=fade] {
+    opacity: 0;
+    transform: translate(100%);
+    transition: 0.6s ease-in 0.3s;
+    --opacity:1;
+    --transform: translate(0);
+  }
+  
+  [data-animation=show] {
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.6s ease-in 0.3s;
+    --opacity:1;
+    --transform: scale(1);
+  }
+  
+  .unset {
+    opacity: var(--opacity);
+    transform: var(--transform);
+  }
+  
+  .services_firstContainer {
+    padding: 1rem;
+    margin: 0rem 4rem;
+    @include large-tablets{
+      margin: 0rem 2rem;
+    }
+    @include tablets{
+      margin: 0rem 2rem;
+    }
+    @include smartphones{
+      margin: 0rem 2rem;
+    }
+    h2,p{
+        text-align: justify;
+    }
+  }
+  
+  .services_description {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    position: relative;
+    @include large-tablets{
+      flex-direction: column;
+    }
+    @include tablets{
+      flex-direction: column;
+    }
+    @include smartphones{
+      flex-direction: column;
+    }
+  }
+  
+  .services_transformCconteiner {
+    position: relative;
+  }
+  
+  .services_transformContent {
+    overflow: hidden;
+  }
+  
+  .services_imgConteiner {
+    flex: 60%;
+    transition: transform 1s;
+  }
+  .services_imgConteiner img {
+    width: 100%;
+  }
+  
+  .services_infoConteiner {
+    flex: 40%;
+    padding: 0rem 1rem;
+    margin-left: 1rem;
+    margin: 1rem 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+    @include large-tablets{
+      align-items: center;
+    }
+    @include tablets{
+      align-items: center;
+    }
+    @include smartphones{
+      margin-left: 0rem;
+      margin-top: 1rem;
+      padding: 0rem;
+      align-items: center;
+      h3{
+        text-align: center;
+      }
+    }
+  }
+  
+  .services_list li {
+    margin: 1rem 0rem;
+  }
+  
+  .button_click{
+    background-color:$color1;
+    color: #000000;
+    border-radius: 55px;
+    border: none;
+    width: 27%;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 500;
+    transition: all 0.6s;
+    @include smartphones{
+      width: 92%;
+    }
+  }
+  .button_click a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .services_secondContainer {
+    padding: 1rem;
+    margin: 0rem 4rem;
+    @include large-tablets{
+      margin: 0rem 2rem;
+      text-align: justify;
+    }
+    @include tablets{
+      margin: 0rem 2rem;
+      text-align: justify;
+    }
+    @include smartphones{
+      margin: 0rem 2rem;
+      text-align: justify;
+      h2{
+        text-align: center;
+      }
+    }
+  }
+  
+  .secondContainer_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include smartphones{
+      .button_click{
+        width: 92%;
+      }
+    }
+  }
+  
+  .services_secondList {
+    list-style-position: inside;
+  }
+  .services_secondList li {
+    margin: 1rem 0rem;
+    text-align: justify;
+  }
+  
+  .services_plans {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    @include large-tablets{
+      flex-direction: column;
+      margin: 0rem 2rem;
+      text-align:justify;
+    }
+    @include tablets{
+      flex-direction: column;
+      margin: 0rem 2rem;
+      text-align: justify;
+    }
+    @include smartphones{
+      flex-direction: column;
+      align-items: center;
+      width: 83%;
+      .plan_description{
+        display: none;
+      }
+    }
+    .plan_description{
+      margin: 0rem 2rem;
+      text-align: justify;
+    }
+    .services_basicPlan{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;;
+      align-items: center;
+      justify-content: end;
+      .button_click{
+        width: 92%;
+      }
+    }
+    .services_premiumPlan{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center; 
+      .button_click{
+        width: 92%;
+      }     
+    }
+  }

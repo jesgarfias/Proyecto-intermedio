@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Las mejores marcas en equipo dental">
+    <script src="js/unidenta.js"></script>
+    <script src="js/unidad_dental.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <title>unidades dentales</title>
+</head>
+<body>
+    <header class="header"></header>
+        <section class="header_info">
+            <section class="header_infoLogo">
+                <img class="header_logo" src="img/SIGMOD.png" alt="logo">
+                <span>SIGMOD</span>
+            </section>
+            <section class="header_infoSearch">
+                <form class="header_search">
+                    <input type="text" placeholder="Buscar">
+                    <div class="header_searchBtn">
+                        <svg width="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39M11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7"/></svg>
+                    </div>
+                </form>
+            </section>
+            <section class="header_infoShop">
+                <div>
+                    <svg width="20" height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g fill="#000"><path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M5.5 5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0" clip-rule="evenodd"/><path d="M5.25 10a3.75 3.75 0 0 0-3.75 3.75v.5a.75.75 0 0 0 1.5 0v-.5a2.25 2.25 0 0 1 2.25-2.25h5.5A2.25 2.25 0 0 1 13 13.75v.5a.75.75 0 0 0 1.5 0v-.5A3.75 3.75 0 0 0 10.75 10z"/></g></svg>
+                </div>
+                <div>
+                    <a href="/Shop.html"><svg width="20" height="20" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="m215.65 133.009 12.157-66.863A12 12 0 0 0 216 52H58.015L53.73 28.423A19.99 19.99 0 0 0 34.05 12H16a12 12 0 0 0 0 24h14.713l26.47 145.592A31.982 31.982 0 1 0 110.988 196h42.026A32.002 32.002 0 1 0 184 172H79.833l-2.91-16h111.179a27.986 27.986 0 0 0 27.547-22.991M88 204a8 8 0 1 1-8-8 8.01 8.01 0 0 1 8 8m96 8a8 8 0 1 1 8-8 8.01 8.01 0 0 1-8 8M62.379 76H201.62l-9.585 52.716a4 4 0 0 1-3.934 3.284H72.56Z"/></svg></a>
+                    <span id="counter">0</span>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" xml:space="preserve"><path d="M21.081 6C23.752 6.031 26 8.766 26 12c0 5.106-6.47 10.969-10.001 13.593C12.466 22.974 6 17.12 6 12c0-3.234 2.248-5.969 4.918-6 2.668.175 3.008.801 5.082 2.879C18.069 6.806 18.418 6.173 21.081 6m-.17-1.994L20.912 4A6.9 6.9 0 0 0 16 6.048 6.9 6.9 0 0 0 11.088 4l.001.006C7.044 3.936 4 7.719 4 12c0 8 11.938 16 11.938 16h.124S28 20 28 12c0-4.287-3.049-8.064-7.089-7.994" style="fill:#0b1719"/></svg>
+                </div>
+            </section>
+        </section>
+        <section class="header_navigation">
+            <div class="header_products">
+                <div class="header_productsTitle">
+                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 448"><path style="fill-opacity:1;stroke:none" d="M0 636.362h448v64H0zm0 160h448v64H0zm0 160h448v64H0z" transform="translate(0 -604.362)"/></svg>
+                    <span>Categorias</span>
+                    <svg class="arrow_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" xml:space="preserve"><path fill="#231F20" d="M15.563 40.836a.997.997 0 0 0 1.414 0l15-15a1 1 0 0 0 0-1.414l-15-15a.999.999 0 1 0-1.414 1.414l14.293 14.293-14.293 14.293a1 1 0 0 0 0 1.414"/></svg>
+                </div>
+            </div>
+            <nav class="header_links">
+                <a class="header_link" href="services.html">Servicios</a>
+                <a class="header_link" href="#">Blog</a>
+                <a class="header_link" href="unidades_dentales.html">Productos</a>
+            </nav>
+        </section>
+        <!--SECCION MENUS DESPLEGABLES-->
+        <section class="headerSubmenu_containerList">
+            <!--Contenedor principal Odonto y equipos-->
+            <ul class="header_productsList">
+                <!--elementos principales de la lista-->
+                <li class="header_produtsElement">
+                    <!--boton flecha para desplieque de submenu-->
+                    <div class="header_produtsElementTitle header_produtsElementTitle--click">
+                        <span>Odontología</span>
+                        <svg class="subArrow_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" xml:space="preserve"><path fill="#231F20" d="M15.563 40.836a.997.997 0 0 0 1.414 0l15-15a1 1 0 0 0 0-1.414l-15-15a.999.999 0 1 0-1.414 1.414l14.293 14.293-14.293 14.293a1 1 0 0 0 0 1.414"/></svg>
+                    </div>
+                    <!--lista oculta-->
+                    <ul class="header_submenu">
+                         <li class="header_submenuItem">
+                            <img src="img/unidad dental.png" alt="unidad dental">
+                            <span>Unidades dentales</span>
+                        </li>
+                        <li class="header_submenuItem">
+                            <img src="img/autoclave.png" alt="autoclave">
+                            <span>Autoclaves</span>
+                        </li>
+                        <li class="header_submenuItem">
+                            <img src="img/insumo dental.png" alt="insumo dental">
+                            <span>Insumos</span>
+                        </li>
+                        <li class="header_submenuItem">
+                            <img src="img/refacciones.png" alt="Refacciones de equipo">
+                            <span>refacciones</span>
+                        </li>
+                    </ul>
+                </li>
+                <!--elementos principales de la lista-->
+                <li class="header_produtsElement">
+                    <!--boton flecha para desplieque de submenu-->
+                    <div class="header_produtsElementTitle header_produtsElementTitle--click">
+                        <span>Diagnostico médico</span>
+                        <svg class="subArrow_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" xml:space="preserve"><path fill="#231F20" d="M15.563 40.836a.997.997 0 0 0 1.414 0l15-15a1 1 0 0 0 0-1.414l-15-15a.999.999 0 1 0-1.414 1.414l14.293 14.293-14.293 14.293a1 1 0 0 0 0 1.414"/></svg>
+                    </div>
+                    <!--lista oculta-->
+                    <ul class="header_submenu" >
+                        <li  class="header_submenuItem">
+                            <img src="img/monitor de signos.png" alt="monitor de signos vitales">
+                            <span>Monitores</span>
+                        </li>
+                        <li class="header_submenuItem">
+                            <img src="img/electrocardiografo.png" alt="electrocardiografo">
+                            <span>Electrocardiografos</span>
+                        </li>
+                        <li class="header_submenuItem">
+                            <img src="img/camilla.png" alt="camilla">
+                            <span>camillas</span>
+                        </li>
+                        <li class="header_submenuItem">
+                            <img src="img/silla de ruedas.png" alt="Ortopedia silla de ruedas">
+                            <span>ortopedia</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section class="products_title">
+            <h2>Unidades dentales</h2>
+            <a href="/index.html">Inicio</a>
+        </section>
+        <section class="products_container">
+            
+        </section>
+    </main>
+    <footer>
+        <section class="footer__section footer__section--direction">
+            <div class="footer__div footer__div--first">
+                <h1>Servicios de Ingeniería Médica y Odontológica </h1>
+                <p>Importaciones Dentales Roentgen SA de CV Camino San Juan de Aragón 856-D, Col. Casas Alemán, Del. G.A.M. Ciudad de México, C. P. 07580</p>
+            </div>
+            <div class="footer__div footer__div--second">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1927665.6920486807!2d-100.65572839422444!3d19.327018891172155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fbc9298aaa05%3A0x5c8fb81cc5cdfcb0!2sDep%C3%B3sito%20Dental%20Roentgen!5e0!3m2!1ses-419!2smx!4v1720109732344!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section class="footer__section footer__section--info">
+            <div class="section__info section__info--first ">
+                <h1 class="info__title">Servicios de Ingeniería Médica y Odontológica </h1>
+                <p class="info__text">Importamos y distribuimos a todo México Unidades Dentales, Equipos e Insumos Odontológios de la más alta calidad.</p>
+                <div class="info__payment">
+                    <img src="img/metodos de pago.svg" alt="metodos de pago">
+                </div>
+            </div>
+            <div class="section__info section__info--second">
+                <h1 class="info__title">Terminos y condiciones</h1>
+                <nav class="info__nav">
+                    <a class="info__navElement" href="#">Aviso de privacidad</a>
+                    <a class="info__navElement" href="#">Politicas de envio</a>
+                    <a class="info__navElement" href="#">Términos de garantias</a>
+                </nav>
+            </div>
+            <div class="section__info section__info--third">
+                <h1 class="info__title">Mi cuenta</h1>
+                <nav class="info__nav">
+                    <a class="info__navElement" href="">informacion personal</a>
+                    <a class="info__navElement" href="">Pedidos</a>
+                    <a class="info__navElement" href="">Facturación</a>
+                </nav>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

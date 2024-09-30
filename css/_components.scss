@@ -1,0 +1,280 @@
+//buttoms
+//btn-carrusel
+
+@mixin smartphones{
+  @media screen and (max-width:26.94rem) {@content};
+}
+@mixin tablets{
+  @media screen and (max-width:48rem) {@content};
+}
+@mixin large-tablets{
+  @media screen and (max-width:64rem) {@content};
+}
+@mixin laptops{
+  @media screen and (max-width:80rem){@content}
+}
+@mixin large-smartphones{
+  @media screen and (max-width:33.75rem) {@content};
+}
+@mixin carrusel-buttons{
+    .btn-right, .btn-left{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        svg{
+          fill: #5f9ea0;
+        }
+        @include smartphones{
+          top: 60%;
+        }
+    }
+    .btn-left{
+        left: 180px;
+        @include smartphones{
+          left: 50px;
+        }
+    }
+    .btn-right{
+        right: 180px;
+        @include smartphones{
+          right: 50px;
+        }
+    }
+}
+//btn-info
+@mixin main-btn{
+    .button_click {
+        background-color: $color1;
+        color: #000000;
+        border-radius: 55px;
+        border: none;
+        width: 27%;
+        font-size: 16px;
+        line-height: 36px;
+        font-weight: 500;
+        transition: all 0.6s;
+      }
+}
+//baner promo
+@mixin promoBanner{
+    .promos__cont {
+        width: 83.5%;
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(270deg, rgb(20, 78, 77) 0%, rgb(20, 103, 82) 54%, rgb(20, 78, 77) 100%);
+        justify-content: space-around;
+        align-items: center;
+      }
+      .promos__cont .promos__elements--sale {
+        display: flex;
+        flex-direction: column;
+        //font-size: 2.2rem;
+      }
+      .promos__cont h1 {
+        width: 25rem;
+        padding: 1rem;
+        font-size: 2em;
+        text-align: center;
+        color: #ffffff;
+        @include large-smartphones{
+          font-size: 1rem;
+        }
+        @include smartphones{
+          font-size: 1em;
+        }
+      }
+      .promos__cont span {
+        font-size: 2em;
+        color: #78ea14;
+        font-weight: 600;
+        @include large-smartphones{
+          font-size: 0.9rem;
+        }
+        @include smartphones{
+          font-size: 0.9rem;
+        }
+      }
+      .promos__cont p {
+        font-size: 2em;
+        color: #e8e8e8;
+        @include large-smartphones{
+          font-size: 0.6rem;
+        }
+        @include smartphones{
+          font-size: 0.6rem;
+        }
+      }
+      .promos__cont .promo__firstElement {
+        border: solid #ffffff 2px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .promos__cont .promo__lastElement {
+        display: flex;
+        flex-direction: row;
+        gap: 0.35rem;
+      }
+      .promos__cont .promo__lastElement svg {
+        width: 30px;
+        fill: #ffffff;
+      }
+      .promos__cont .promo__lastElement .lastElement__text {
+        font-size: 1.4rem;
+        font-weight: 500;
+        @include large-smartphones{
+          font-size: 0.7rem;
+        }
+        @include smartphones{
+          font-size: 0.6rem;
+        }
+      }
+
+}
+//SECCION PRODUCTOS DESTACADOS
+@mixin bestProducts{
+    .promociones_principalContainer {
+        padding: 0px 15px 0px 15px;
+        @include large-tablets{
+          padding: 0;
+        }
+        @include tablets{
+          padding: 0;
+        }
+        @include smartphones{
+          padding: 0;
+        }
+      }
+      .promociones_principalContainer img {
+        width: 560px;
+        @include laptops{
+          width: 100%;
+        }
+        @include large-tablets{
+          width: 100%;
+        }
+        @include tablets{
+          width: 100%;
+        }
+        @include smartphones{
+          width: 100%;
+        }
+      }
+      
+      .promociones_secondContainer {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        @include large-tablets{
+          flex-direction: column;
+        }
+        @include tablets{
+          width: 92%;
+          flex-direction: column;
+        }
+        @include smartphones{
+          width: 100%;
+          flex-direction: column;
+        }
+      }
+      
+      .promociones_bannerContainer {
+        flex: 50%;
+        padding: 1rem;
+        margin: 1rem;
+      }
+      
+      .promociones_elementsContainer {
+        position: relative;
+      }
+      
+      .promociones_elementContent {
+        overflow: hidden;
+      }
+      
+      .promociones_elementImg {
+        transition: transform 1s;
+      }
+      
+      .promociones_elementText {
+        display: flex;
+        flex-direction: column;
+        top: 34px;
+        left: 25px;
+        position: absolute;
+        gap: 1rem;
+        z-index: 1;
+        @include smartphones{
+          top: 14px;
+          left: 15px;
+        }
+        h2{
+          font-size: 1.1rem;
+        }
+      }
+}
+// seccion blog
+@mixin blog{
+    .blog__mainContainer {
+        padding: 0px 15px 0px 15px;
+      }
+      .blog__mainContainer img {
+        width: 370px;
+        @include tablets{
+          width: 100%;
+        }
+      }
+      
+      .blog__grid {
+        display: grid;
+        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1rem;
+        grid-auto-rows: 24rem;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        @include tablets{
+          width: 92%;
+        }
+        @include large-smartphones{
+          width: 65%;
+        }
+        @include smartphones{
+          width: 100%;
+        }
+      }
+      
+      .blog__gridItem {
+        padding: 1rem;
+        position: relative;
+      }
+      
+      .blog__gridItemContent {
+        overflow: hidden;
+      }
+      
+      .blog__gridImgText {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        z-index: 1;
+        margin-top: 1rem;
+      }
+      
+      .blog__gridImgContent {
+        transition: transform 1s;
+      }
+      
+      .blog__gridImg {
+        width: 100%;
+      }
+}

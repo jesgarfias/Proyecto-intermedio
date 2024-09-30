@@ -1,0 +1,49 @@
+@mixin smartphones{
+    @media screen and (max-width:26.94rem) {@content}
+  };
+  @mixin tablets{
+    @media screen and (max-width:48rem) {@content};
+  }
+  @mixin large-tablets{
+    @media screen and (max-width:64rem) {@content};
+  }
+.products_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title_link{
+        text-decoration: none;
+    }
+}
+.product_item{
+    width: 100%;
+    border: 2px $color1 solid;
+    border-radius: 15px;
+}
+.item_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    img{
+        width: 20%;
+        @include smartphones{
+            width: 80%;
+        }
+    }
+    @include smartphones{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+}
+.item_title{
+    width: 25%;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.item_element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
