@@ -72,10 +72,12 @@ let moveToLeft = () =>{
     displacement.style.transform=`translate(-${operador}%)`;
     displacement.style.transition="transform .6s";
 }
-/*setInterval(()=>{
+setInterval(()=>{
     moveToRigth()
-},4500)*/
-//contador carrito
+},4500)
+
+
+//===================  contador carrito ====================
 const elementInCart=JSON.parse(localStorage.getItem("unidades-dentales"));
 const counte=document.querySelector("#counter");
 
